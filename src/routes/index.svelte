@@ -1,0 +1,44 @@
+<script>
+	import Table from '$lib/components/Table.svelte';
+
+	let contractAddresses = [
+		'0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae',
+		'0x58f876857a02d6762e0101bb5c46a8c1ed44dc16',
+		'0x7efaef62fddcca950418312c6c91aef321375a00',
+		'0xed2ec734193626282e105a4a44bf39c1f6b44d78',
+		'0x22b8aa087c135a8fb30b1702a070f249793c96e6',
+		'0xe2ebdfe188c8ed5e25c79a16e7fb2ed45896c9e3',
+		'0x0003a9a2b9d2dd72a2536d8964287f0dab6a8d3a',
+		'0xf1a006b34d429f850d6ef4e480c8b02f94b0cf39',
+		'0xb4ec801aed8c92f2e69589518aaa127afb37d8c9',
+		'0xd99c7f6c65857ac913a8f880a4cb84032ab2fc5b'
+	];
+</script>
+
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+{#each contractAddresses as address}
+	<div class="column">
+		<div class="row">
+			<p>Contract Address:</p>
+			<a href={`/${address}`}>{address}</a>
+		</div>
+	</div>
+{/each}
+
+<style>
+	.column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	.row p {
+		margin-right: 1rem;
+		font-weight: bold;
+	}
+</style>
