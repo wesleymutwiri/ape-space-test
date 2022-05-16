@@ -1,38 +1,37 @@
-# create-svelte
+# Apespace test application
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A simple application that hich takes a contract address as a URL path parameter and displays the daily volume for the pair at the given address over the past 7 days.
 
-## Creating a project
+## Getting started
 
-If you're seeing this, you've probably already done this step. Congrats!
+In order to get started, you will be required to clone the repository to your local machine. You'll require to have [Node JS](https://nodejs.org/en/) installed on your machine.
 
 ```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
+git clone https://github.com/wesleymutwiri/ape-space-test.git
+cd ape-space-test
 ```
 
-## Developing
+### Create a .env file
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This project requires your authentication key and the endpoint to be used. Create the .env file in the root folder of the project.
+
+```env
+BASE_URL="https://example.com/"
+AUTHORIZATION_TOKEN="some_super_secret_token"
+```
+
+### Run the project
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Issues
 
-To create a production version of your app:
+The current endpoint sometimes returns null hence you won't get the correct data.
 
-```bash
-npm run build
-```
+## Potential Improvements
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. Using Typescript everywhere in the project for type checking
+2. Writing tests for components and endpoints to confirm authenticity.
+3. Creating a better styled application
